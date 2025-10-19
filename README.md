@@ -1,228 +1,146 @@
-# 🎯 FOCO - App de Produtividade e Pomodoro# 🎯 FOCO - App de Produtividade e Pomodoro
+# 🎯 FOCO — App de Produtividade e Pomodoro
 
-Aplicativo mobile de produtividade que combina timer Pomodoro com gerenciamento de tarefas. Desenvolvido com React Native e Expo.Aplicativo mobile de produtividade que combina timer Pomodoro com gerenciamento de tarefas. Desenvolvido com React Native e Expo.
+Aplicativo mobile que combina **técnica Pomodoro** e **gerenciamento de tarefas**, desenvolvido com **React Native + Expo**.
 
-## ✨ O que tem## ✨ O que tem
+---
 
-- 🍅 **Timer Pomodoro** - Cronômetro para sessões de foco- 🍅 **Timer Pomodoro** - Cronômetro para sessões de foco
+## ✨ Funcionalidades
 
-- 📋 **Lista de Tarefas** - Criar, editar, excluir e marcar como concluídas - 📋 **Lista de Tarefas** - Criar, editar, excluir e marcar como concluídas
+- 🍅 **Timer Pomodoro** — Sessões de foco com cronômetro
+- 📋 **Lista de Tarefas** — Criar, editar, excluir e marcar como concluída
+- 🎨 **Animações** — Feedback visual ao completar tarefas
+- 📱 **Navegação por Abas** — Interface moderna com bottom tabs
+- 🌙 **Tema Escuro** — Design em tons escuros e roxos
 
-- 🎨 **Animações** - Feedback visual quando completa tarefas- 🎨 **Animações** - Feedback visual quando completa tarefas
+---
 
-- 📱 **Navegação por Abas** - Interface moderna bottom tabs- 📱 **Navegação por Abas** - Interface moderna bottom tabs
+## 🚀 Como Rodar
 
-- 🌙 **Tema Escuro** - Design em tons escuros/roxos- 🌙 **Tema Escuro** - Design em tons escuros/roxos
+```bash
+# Clone o repositório
+git clone https://github.com/carlosmorais-git/AplicativoFocus.git
+cd AplicativoFocus
 
-## 🚀 Como rodar## 🚀 Como rodar
+# Instale as dependências
+npm install
 
-`bash`bash
+# Inicie o app
+npm start
+```
 
-# Clone o repo# Clone o repo
+💡 **No Windows:** execute `iniciar-projeto-foco.bat`  
+Depois, escaneie o QR Code com o **Expo Go** ou use o emulador (`a` para Android, `i` para iOS).
 
-git clone https://github.com/carlosmorais-git/AplicativoFocus.gitgit clone https://github.com/carlosmorais-git/AplicativoFocus.git
+---
 
-cd AplicativoFocuscd AplicativoFocus
+## 🧩 Stack
 
-# Instala dependências# Instala dependências
+React Native • Expo • React Native Reanimated
 
-npm installnpm install
+---
 
-# Roda o app# Roda o app
-
-npm startnpm start
-
-````
-
-
-
-**No Windows:** Pode usar o `iniciar-projeto-foco.bat`**No Windows:** Pode usar o `iniciar-projeto-foco.bat`
-
-
-
-Depois é só escanear o QR code com o Expo Go ou rodar no emulador (tecla `a` para Android, `i` para iOS).Depois é só escanear o QR code com o Expo Go ou rodar no emulador (tecla `a` para Android, `i` para iOS).
-
-
-
-## 🔧 Stack## � Stack
-
-
-
-React Native + Expo + Reanimated para as animaçõesReact Native + Expo + Reanimated para as animações
-
-
-
-## ℹ️ Sobre## ℹ️ Sobre
-
-
-
-Projeto pessoal de um app de produtividade. Refatorei de drawer navigation para bottom tabs e implementei animações quando você completa uma tarefa. Bem simples mas funciona! 😄Projeto pessoal de um app de produtividade. Refatorei de drawer navigation para bottom tabs e implementei animações quando você completa uma tarefa. Bem simples mas funciona! �
-
-## 🏗️ Estrutura do Projeto
+## 🏗️ Estrutura
 
 ```
 app/
-├── _layout.jsx          # Layout principal com navegação por abas
-├── index.jsx            # Tela inicial (Timer Pomodoro)
-├── pomodoro.jsx         # Funcionalidades do timer
-├── add_tarefa/          # Tela para adicionar tarefas
-├── edit_tarefa/         # Tela para editar tarefas
-└── tarefas/             # Lista de tarefas
+├── _layout.jsx         # Layout principal com navegação
+├── index.jsx           # Tela inicial (Pomodoro)
+├── tarefas/            # Lista de tarefas
+├── add_tarefa/         # Adicionar tarefa
+├── edit_tarefa/        # Editar tarefa
+└── pomodoro.jsx        # Lógica do cronômetro
+
+assets/
+├── Designer/           # Fotos do app funcionando
 
 components/
-├── Actions/             # Botões de ação
-├── DigitarTarefa/       # Input para tarefas
-├── FocoBotao/           # Botão principal do timer
-├── ModalGlobal/         # Modal reutilizável
-├── NotificacaoGlobal/   # Sistema de notificações
-├── TarefaItem/          # Item individual da tarefa
-└── Tempo/               # Componente do cronômetro
+├── Actions/            # Botões de ação
+├── FocoBotao/          # Botão principal do timer
+├── ModalGlobal/        # Modal reutilizável
+├── NotificacaoGlobal/  # Sistema de notificações
+└── TarefaItem/         # Item individual da tarefa
 
 context/
-├── modal/               # Context API para modais
-├── notificacao/         # Context API para notificações
-└── tarefas/             # Context API para gerenciamento de tarefas
+├── modal/              # Controle de modais
+├── notificacao/        # Controle de notificações
+└── tarefas/            # Controle global de tarefas
 ```
 
-## 🎯 Funcionalidades Detalhadas
+---
 
-### Sistema de Navegação
-
-- **Bottom Tabs**: Navegação intuitiva entre "Foco" e "Tarefas"
-- **Roteamento**: Baseado em arquivos com Expo Router
-- **Transições**: Animações suaves entre telas
-
-### Animações e Feedback
-
-- **Tarefa Concluída**: Animação de celebração com pulso e mudança de cor
-- **Modais**: Entrada/saída com spring e scale
-- **Notificações**: Animações fluidas com barra de progresso
-- **Interações**: Feedback visual em todos os toques
-
-### Gerenciamento de Estado
-
-- **Context API**: Para estados globais (tarefas, modais, notificações)
-- **Hooks customizados**: Para lógicas específicas
-- **Persistência**: Estados mantidos durante a sessão
-
-## 🔧 Scripts Disponíveis
+## 🔧 Scripts
 
 ```bash
-# Iniciar o app
-npm start
-
-# Executar diretamente no Android
-npm run android
-
-# Executar diretamente no iOS
-npm run ios
-
-# Executar na web
-npm run web
-
-# Verificar código com ESLint
-npm run lint
-
-# Resetar projeto (limpar exemplo)
-npm run reset-project
+npm start          # Iniciar o app
+npm run android    # Executar no Android
+npm run ios        # Executar no iOS
+npm run web        # Executar na web
+npm run lint       # Verificar código
+npm run reset-project  # Resetar o projeto
 ```
+
+---
 
 ## ❓ FAQ
 
-### **P: O app funciona offline?**
+**O app funciona offline?**  
+✅ Sim! Todos os dados são armazenados localmente.
 
-R: Sim! Todas as funcionalidades principais funcionam offline. Os dados são armazenados localmente no dispositivo.
+**Posso personalizar o tempo do Pomodoro?**  
+🕒 Ainda não, mas está no roadmap.
 
-### **P: É possível personalizar os tempos do Pomodoro?**
+**Consome muita bateria?**  
+🔋 Não! As animações são otimizadas com Reanimated.
 
-R: Atualmente o timer é fixo, mas a personalização está no roadmap para futuras versões.
+**Funciona em tablets?**  
+📱 Sim, com layout responsivo.
 
-### **P: O app consome muita bateria?**
-
-R: Não! O app foi otimizado para uso eficiente de recursos, com animações nativas e gerenciamento inteligente de estado.
-
-### **P: Funciona em tablets?**
-
-R: Sim! O design é responsivo e se adapta a diferentes tamanhos de tela.
-
-## 🤝 Contribuindo
-
-Contribuições são sempre bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-### 🐛 Reportando Bugs
-
-- Use as [Issues do GitHub](https://github.com/carlosmorais-git/AplicativoFocus/issues)
-- Descreva os passos para reproduzir o problema
-- Inclua screenshots se possível
-- Mencione seu dispositivo e versão do OS
+---
 
 ## 📋 Roadmap
 
-- [ ] Implementar persistência de dados (AsyncStorage)
-- [ ] Adicionar estatísticas de produtividade
-- [ ] Notificações push para lembretes
-- [ ] Temas personalizáveis (claro/escuro)
-- [ ] Integração com calendário
+- [ ] Persistência de dados (AsyncStorage)
+- [ ] Estatísticas de produtividade
+- [ ] Notificações push
+- [ ] Temas personalizáveis
 - [ ] Backup na nuvem
-- [ ] Múltiplos perfis de timer
 
-## � Documentação
+---
 
-- 📋 **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guia para contribuidores
-- 📜 **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - Código de conduta da comunidade
-- 📝 **[CHANGELOG.md](CHANGELOG.md)** - Histórico de mudanças e versões
-- 🚦 **[Templates GitHub](.github/)** - Templates para Issues e PRs
+## 🤝 Contribuindo
 
-## �📝 Licença
+1. Faça um fork
+2. Crie uma branch (`git checkout -b feature/NovaFeature`)
+3. Commit (`git commit -m "feat: adiciona NovaFeature"`)
+4. Push (`git push origin feature/NovaFeature`)
+5. Abra um Pull Request
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+🐛 **Reportar bugs:** [Issues](https://github.com/carlosmorais-git/AplicativoFocus/issues)
+
+---
+
+## 📈 Versão 2.0 — Refatoração Completa (Out/2025)
+
+**Principais mudanças:**
+
+- Drawer → Bottom Tabs
+- Tema escuro moderno (#021123 / #B872FF)
+- Animações com Reanimated
+- UX aprimorada e feedback visual em todas as ações
+
+---
+
+## 🧾 Licença
+
+Licenciado sob **MIT** — veja [LICENSE](LICENSE).
+
+---
 
 ## 📞 Contato
 
-**Carlos Morais** - [GitHub](https://github.com/carlosmorais-git)
-
-**Link do Projeto:** [https://github.com/carlosmorais-git/AplicativoFocus](https://github.com/carlosmorais-git/AplicativoFocus)
-
----
-
-## 📈 Histórico de Desenvolvimento
-
-### 🚀 Versão 2.0 - Refatoração Completa (Outubro 2025)
-
-Este projeto passou por uma **refatoração completa** focada na experiência do usuário:
-
-#### 🔄 **Principais Mudanças:**
-
-- **Navegação:** Migração de Drawer Navigator → Bottom Tabs
-- **Design:** Implementação de tema escuro moderno (#021123, #B872FF)
-- **Animações:** Sistema completo com React Native Reanimated
-- **UX:** Feedback visual aprimorado em todas as interações
-
-#### ✨ **Melhorias Implementadas:**
-
-| Área             | Antes                        | Depois                                    |
-| ---------------- | ---------------------------- | ----------------------------------------- |
-| **Navegação**    | Menu lateral (Drawer)        | Abas inferiores (Bottom Tabs)             |
-| **Modais**       | Básicos com animação simples | Modernos com spring e scale               |
-| **Notificações** | Apenas auto-close            | Fechamento manual + tipos específicos     |
-| **Tarefas**      | Lista simples                | Animações de celebração + feedback visual |
-
-#### 🎯 **Funcionalidades Testadas:**
-
-- ✅ Navegação fluida entre abas
-- ✅ Timer Pomodoro funcionando perfeitamente
-- ✅ CRUD completo de tarefas
-- ✅ Animações de conclusão de tarefa
-- ✅ Sistema de notificações responsivo
-- ✅ Responsividade em diferentes dispositivos
+**Carlos Morais** — [GitHub](https://github.com/carlosmorais-git)  
+📦 Projeto: [AplicativoFocus](https://github.com/carlosmorais-git/AplicativoFocus)
 
 ---
 
-_Desenvolvido com ❤️ usando React Native e Expo_
-````
+_Desenvolvido com ❤️ usando React Native e Expo._
